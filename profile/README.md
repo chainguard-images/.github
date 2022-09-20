@@ -14,7 +14,7 @@ the package manager used by Alpine, similar to .deb or .rpm for instance.
 
 apko lets you bundle a collection of APKs into an OCI image using a declarative YAML manifest.
 
-Our distroless images provide SBOM support and signatures for known provenance and more secure base
+Chainguard Images provide SBOM support and signatures for known provenance and more secure base
 images. They can be part of an approach to a secure software factory.
 
 Many of the images use the [Wolfi undistro](https://github.com/wolfi-dev/), and we are working on
@@ -30,12 +30,12 @@ To pull the apko image with Docker:
 docker pull cgr.dev/chainguard/apko 
 ```
 
-Because all distroless images are signed using [sigstore](https://www.sigstore.dev/), you can check
-the signature using [cosign](https://docs.sigstore.dev/cosign/overview). For our apko image example,
+All Chainguard Images are signed using [Sigstore](https://www.sigstore.dev/), and you can check
+the signature using [`cosign`](https://docs.sigstore.dev/cosign/overview). For our apko image example,
 you can run the following:
 
 ```
-COSIGN_EXPERIMENTAL=1 cosign verify distroless.dev/apko | jq 
+COSIGN_EXPERIMENTAL=1 cosign verify cgr.dev/chainguard/apko | jq 
 ```
 
 Your output will indicate that the cosign claims were validated.

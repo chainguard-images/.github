@@ -59,7 +59,6 @@ FROM cgr.dev/chainguard/static:latest
 
 COPY --from=build /hello /hello
 CMD ["/hello"]
-
 ```
 
 We can compile and run this with:
@@ -92,6 +91,7 @@ as SBOMs.
 Examples:
 
  - [go](https://github.com/chainguard-images/go)
+ - [gcc-glibc](https://github.com/chainguard-images/gcc-glibc)
  - [gcc-musl](https://github.com/chainguard-images/gcc-musl)
 
 ### Middleware and Applications

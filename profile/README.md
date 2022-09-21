@@ -7,7 +7,8 @@ dependencies. There is no shell or package manager.
 
 All these images are built using [apko](https://github.com/chainguard-dev/apko) and
 [melange](https://github.com/chainguard-dev/melange). Combined, these tools provide for a
-reproducible, declarative approach to building OCI images.
+reproducible, declarative approach to building OCI images. We aim to build images from the latest
+sources every night, ensuring that vulnerabilities are addressed as quickly as possible.
 
 melange lets you build apks using declarative YAML pipelines. apks are .apk packages compatible with
 the package manager used by Alpine, similar to .deb or .rpm for instance.
@@ -24,11 +25,89 @@ porting the rest.
 
 Our images are available via cgr.dev.
 
-To pull the apko image with Docker:
+For example, to pull the apko image with Docker:
 
 ```
 docker pull cgr.dev/chainguard/apko 
 ```
+
+There are various types of images available. The full list can be found in the Release Status section
+or you can use the repository search function. Some categories and highlights follow.
+
+### Distroless Base Images
+
+The static image is designed for running statically compiled binaries. Unlike the completely empty
+scratch image, we do include some commonly required files and directories such as:
+
+ - Root certificate data
+ - `/etc/passwd` and `/tmp`
+
+The most common way to use this image is with a multistage Dockerfile. For example:
+
+```
+# syntax=docker/dockerfile:1.4
+FROM cgr.dev/chainguard/gcc-musl:latest as build
+
+COPY <<EOF /hello.c
+#include <stdio.h>
+int main() { printf("Hello Distroless!"); }
+EOF
+RUN cc -static /hello.c -o /hello
+
+FROM cgr.dev/chainguard/static:latest
+
+COPY --from=build /hello /hello
+CMD ["/hello"]
+
+```
+
+We can compile and run this with:
+
+```
+$ docker build -t c-distroless .
+...
+$ docker run c-distroless
+Hello Distroless!
+```
+
+In some cases it is easier to produce binaries that are dynamically linked against glibc or musl,
+but otherwise self-contained. In those cases you can use the following images:
+
+ - [glibc-dynamic](https://github.com/chainguard-images/glibc-dynamic)
+ - [musl-dynamic](https://github.com/chainguard-images/musl-dynamic)
+
+### Language Runtimes
+
+These are still largely in progress, but we are working on images for runtimes such as the JRE.
+
+### Compilers
+
+These images can be used to compile artifacts for use in runtime or base images. For instance the go
+image can be used to compile golang code for use in the static base image.
+
+We have plans to include extra tooling in these images for creating provenance information such
+as SBOMs.
+
+Examples:
+
+ - [go](https://github.com/chainguard-images/go)
+ - [gcc-musl](https://github.com/chainguard-images/gcc-musl)
+
+### Middleware and Applications
+
+These images contain stand-alone software, such as databases and web servers, as well as tooling
+such as apko and melange.
+
+Because our images are constantly rebuilt with the latest sources and include the absolute minimum
+of dependencies, they typically have significantly less vulnerabilities than equivalent images.
+
+For example:
+ - [nginx](https://github.com/chainguard-images/nginx) 
+ - [git](https://github.com/chainguard-images/git)
+ - [apko](https://github.com/chainguard-images/apko)
+ - [melange](https://github.com/chainguard-images/melange)
+
+## Signatures
 
 All Chainguard Images are signed using [Sigstore](https://www.sigstore.dev/), and you can check
 the signature using [`cosign`](https://docs.sigstore.dev/cosign/overview). For our apko image example,

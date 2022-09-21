@@ -31,10 +31,11 @@ For example, to pull the apko image with Docker:
 docker pull cgr.dev/chainguard/apko 
 ```
 
-There are various types of images available. The full list can be found in the Release Status section
-or you can use the repository search function. Some categories and highlights follow.
+There are various types of images available. The full list can be found in the [Release Status
+section](https://github.com/chainguard-images#release-status) or you can use the repository search
+function. Some categories and highlights follow.
 
-### Distroless Base Images
+### Minimal Base Images
 
 The static image is designed for running statically compiled binaries. Unlike the completely empty
 scratch image, we do include some commonly required files and directories such as:
@@ -50,7 +51,7 @@ FROM cgr.dev/chainguard/gcc-musl:latest as build
 
 COPY <<EOF /hello.c
 #include <stdio.h>
-int main() { printf("Hello Distroless!"); }
+int main() { printf("Hello World!"); }
 EOF
 RUN cc -static /hello.c -o /hello
 
@@ -64,10 +65,10 @@ CMD ["/hello"]
 We can compile and run this with:
 
 ```
-$ docker build -t c-distroless .
+$ docker build -t c-static .
 ...
-$ docker run c-distroless
-Hello Distroless!
+$ docker run c-static
+Hello World!
 ```
 
 In some cases it is easier to produce binaries that are dynamically linked against glibc or musl,

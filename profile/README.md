@@ -120,6 +120,39 @@ COSIGN_EXPERIMENTAL=1 cosign verify cgr.dev/chainguard/apko | jq
 
 Your output will indicate that the cosign claims were validated.
 
+## SBOMs
+
+All Chainguard Images come with a Software Bill Of Materials (SBOM) generated at build-time. This
+can be downloaded using the cosign tool e.g:
+
+```
+$ cosign download sbom --platform linux/amd64 cgr.dev/chainguard/nginx | jq
+WARNING: Downloading SBOMs this way does not ensure its authenticity. If you want to ensure a tamper-proof SBOM, download it using 'cosign download attestation <image uri>' or verify its signature.
+Found SBOM of media type: spdx+json
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "sbom-sha256:05f301c5da6b701a1024dce52ccb9c58a61f98cd9816432ace5c0f7bfef40df7",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2022-09-22T01:41:52Z",
+    "creators": [
+      "Tool: apko (canary)",
+      "Organization: Chainguard, Inc"
+    ],
+    "licenseListVersion": "3.16"
+  },
+  "dataLicense": "CC0-1.0",
+  "documentNamespace": "https://spdx.org/spdxdocs/apko/",
+  "documentDescribes": [
+    "SPDXRef-Package-sha256-a8aa25c0811fec7afc8de07be49340e27c4bb752fde24a1dae0509d1a3824b3a"
+  ],
+  "packages": [
+  ...
+```
+
+Make sure to specify the required platform, or the resultant SBOM will only cover the image manifest and not
+the contents of the image.
+
 ## Learn more 
 
 You can learn more about Wolfi, distroless images, apko, and melange from the following

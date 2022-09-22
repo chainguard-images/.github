@@ -122,8 +122,9 @@ Your output will indicate that the cosign claims were validated.
 
 ## SBOMs
 
-All Chainguard Images come with a Software Bill Of Materials (SBOM) generated at build-time. This
-can be downloaded using the cosign tool e.g:
+All Chainguard Images come with a [Software Bill Of Materials
+(SBOM)](https://www.chainguard.dev/unchained/what-an-sbom-can-do-for-you) generated at build-time.
+The SBOM can be downloaded using the [`cosign`](https://docs.sigstore.dev/cosign/overview) tool e.g:
 
 ```
 $ cosign download sbom --platform linux/amd64 cgr.dev/chainguard/nginx | jq
@@ -150,7 +151,7 @@ Found SBOM of media type: spdx+json
   ...
 ```
 
-Make sure to specify the required platform, or the resultant SBOM will only cover the image manifest and not
+Make sure to specify the required platform, or the resultant SBOM may only cover the image manifest and not
 the contents of the image.
 
 ## Learn more 

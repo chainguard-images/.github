@@ -7,6 +7,7 @@ on:
     paths:
       - .github/workflows/sync-org-labels.yml
       - labels.json
+  pull_request_target:
   workflow_dispatch:
   schedule:
     - cron: '0 1 * * *'  # At 01:00.
@@ -82,8 +83,11 @@ jobs:
             };
 
             // Apply to config to all repos in the current org
+            const opts = github.rest.repos.listForOrg({
+              org: context.repo.owner,
+            })
             for await (const response of github.paginate.iterator(
-              github.repos.listForOrg,
+              opts,
               { org: context.repo.owner }
             )) {
               for (const repo of response.data) {

@@ -83,7 +83,7 @@ jobs:
 
             // Apply to config to all repos in the current org
             for await (const response of github.paginate.iterator(
-              github.repos.listForOrg,
+              github.rest.repos.listForOrg,
               { org: context.repo.owner }
             )) {
               for (const repo of response.data) {

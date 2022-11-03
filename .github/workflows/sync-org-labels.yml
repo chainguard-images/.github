@@ -26,7 +26,7 @@ jobs:
             // Gets current labels available on repo
             const currentLabels = repo =>
               github.paginate(
-                github.issues.listLabelsForRepo,
+                github.rest.issues.listLabelsForRepo,
                 repo,
                 response => response.data.map(label => ({
                   name: label.name,
@@ -50,7 +50,7 @@ jobs:
                   if (current == undefined) {
                     if (current = existing.get(label.alias)) {
                       core.info(`Renaming ${label.alias} to ${label.name}`);
-                      return await github.issues.updateLabel({
+                      return await github.rest.issues.updateLabel({
                         ...repo,
                         name: label.alias,
                         new_name: label.name,
@@ -59,13 +59,13 @@ jobs:
                       });
                     } else {
                       core.info(`Creating ${label.name}`);
-                      return await github.issues.createLabel({...repo, ...label});
+                      return await github.rest.issues.createLabel({...repo, ...label});
                     }
                   } else if (current.color == label.color && current.description == label.description) {
                     core.info(`Skipping ${label.name}`);
                   } else {
                     core.info(`Updating ${label.name}`);
-                    return await github.issues.updateLabel({...repo, ...label});
+                    return await github.rest.issues.updateLabel({...repo, ...label});
                   }
                 } catch (err) {
                   core.error(`Error applying ${label.name}: ${err}`);

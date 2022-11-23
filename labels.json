@@ -83,5 +83,10 @@
     "name": "image-request",
     "description": "tag for new chainguard image requests",
     "color": "d4c5f9"
+  },
+  {
+    "name": "out-of-slo",
+    "description": "to mark an issue or pr out of the slo bot",
+    "color": "bcbcbc"
   }
 ]

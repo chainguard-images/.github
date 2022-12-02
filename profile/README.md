@@ -73,8 +73,8 @@ Hello World!
 In some cases it is easier to produce binaries that are dynamically linked against glibc or musl,
 but otherwise self-contained. In those cases you can use the following images:
 
- - [glibc-dynamic](https://github.com/chainguard-images/glibc-dynamic)
- - [musl-dynamic](https://github.com/chainguard-images/musl-dynamic)
+ - [glibc-dynamic](https://github.com/chainguard-images/images/tree/main/images/glibc-dynamic)
+ - [musl-dynamic](https://github.com/chainguard-images/images/tree/main/images/musl-dynamic)
 
 ### Language Runtimes
 
@@ -90,9 +90,9 @@ as SBOMs.
 
 Examples:
 
- - [go](https://github.com/chainguard-images/go)
- - [gcc-glibc](https://github.com/chainguard-images/gcc-glibc)
- - [gcc-musl](https://github.com/chainguard-images/gcc-musl)
+ - [go](https://github.com/chainguard-images/images/tree/main/images/go)
+ - [gcc-glibc](https://github.com/chainguard-images/images/tree/main/images/gcc-glibc)
+ - [gcc-musl](https://github.com/chainguard-images/images/tree/main/images/gcc-musl)
 
 ### Middleware and Applications
 
@@ -103,10 +103,10 @@ Because our images are constantly rebuilt with the latest sources and include th
 of dependencies, they typically have significantly less vulnerabilities than equivalent images.
 
 For example:
- - [nginx](https://github.com/chainguard-images/nginx) 
- - [git](https://github.com/chainguard-images/git)
- - [apko](https://github.com/chainguard-images/apko)
- - [melange](https://github.com/chainguard-images/melange)
+ - [nginx](https://github.com/chainguard-images/images/tree/main/images/nginx) 
+ - [git](https://github.com/chainguard-images/images/tree/main/images/git)
+ - [apko](https://github.com/chainguard-images/images/tree/main/images/apko)
+ - [melange](https://github.com/chainguard-images/images/tree/main/images/melange)
 
 ## Signatures
 
@@ -171,27 +171,31 @@ For commercial support, please see [Chainguard](https://www.chainguard.dev/chain
 
 ## Release Status
 
-| Repo  |  Status |
-| ----- | ----- |
-| [alpine-base](https://github.com/chainguard-images/alpine-base) | [![CI status](https://github.com/chainguard-images/alpine-base/actions/workflows/release.yaml/badge.svg)](https://github.com/chainguard-images/alpine-base/actions/workflows/release.yaml) |
-| [apko](https://github.com/chainguard-images/apko) | [![CI status](https://github.com/chainguard-images/apko/actions/workflows/release.yaml/badge.svg)](https://github.com/chainguard-images/apko/actions/workflows/release.yaml) |
-| [busybox](https://github.com/chainguard-images/busybox) | [![CI status](https://github.com/chainguard-images/busybox/actions/workflows/release.yaml/badge.svg)](https://github.com/chainguard-images/busybox/actions/workflows/release.yaml) |
-| [gcc-glibc](https://github.com/chainguard-images/gcc-glibc) | [![CI status](https://github.com/chainguard-images/gcc-glibc/actions/workflows/release.yaml/badge.svg)](https://github.com/chainguard-images/gcc-glibc/actions/workflows/release.yaml) |
-| [gcc-musl](https://github.com/chainguard-images/gcc-musl) | [![CI status](https://github.com/chainguard-images/gcc-musl/actions/workflows/release.yaml/badge.svg)](https://github.com/chainguard-images/gcc-musl/actions/workflows/release.yaml) |
-| [git](https://github.com/chainguard-images/git) | [![CI status](https://github.com/chainguard-images/git/actions/workflows/release.yaml/badge.svg)](https://github.com/chainguard-images/git/actions/workflows/release.yaml) |
-| [glibc-dynamic](https://github.com/chainguard-images/glibc-dynamic) | [![CI status](https://github.com/chainguard-images/glibc-dynamic/actions/workflows/release.yaml/badge.svg)](https://github.com/chainguard-images/glibc-dynamic/actions/workflows/release.yaml) |
-| [go](https://github.com/chainguard-images/go) | [![CI status](https://github.com/chainguard-images/go/actions/workflows/release.yaml/badge.svg)](https://github.com/chainguard-images/go/actions/workflows/release.yaml) |
-| [hello-world](https://github.com/chainguard-images/hello-world) | [![CI status](https://github.com/chainguard-images/hello-world/actions/workflows/release.yaml/badge.svg)](https://github.com/chainguard-images/hello-world/actions/workflows/release.yaml) |
-| [jdk](https://github.com/chainguard-images/jdk) | [![CI status](https://github.com/chainguard-images/jdk/actions/workflows/release.yaml/badge.svg)](https://github.com/chainguard-images/jdk/actions/workflows/release.yaml) |
-| [ko](https://github.com/chainguard-images/ko) | [![CI status](https://github.com/chainguard-images/ko/actions/workflows/release.yaml/badge.svg)](https://github.com/chainguard-images/ko/actions/workflows/release.yaml) |
-| [melange](https://github.com/chainguard-images/melange) | [![CI status](https://github.com/chainguard-images/melange/actions/workflows/release.yaml/badge.svg)](https://github.com/chainguard-images/melange/actions/workflows/release.yaml) |
-| [musl-dynamic](https://github.com/chainguard-images/musl-dynamic) | [![CI status](https://github.com/chainguard-images/musl-dynamic/actions/workflows/release.yaml/badge.svg)](https://github.com/chainguard-images/musl-dynamic/actions/workflows/release.yaml) |
-| [nginx](https://github.com/chainguard-images/nginx) | [![CI status](https://github.com/chainguard-images/nginx/actions/workflows/release.yaml/badge.svg)](https://github.com/chainguard-images/nginx/actions/workflows/release.yaml) |
-| [node](https://github.com/chainguard-images/node) | [![CI status](https://github.com/chainguard-images/node/actions/workflows/release.yaml/badge.svg)](https://github.com/chainguard-images/node/actions/workflows/release.yaml) |
-| [php](https://github.com/chainguard-images/php) | [![CI status](https://github.com/chainguard-images/php/actions/workflows/release.yaml/badge.svg)](https://github.com/chainguard-images/php/actions/workflows/release.yaml) |
-| [postgres](https://github.com/chainguard-images/postgres) | [![CI status](https://github.com/chainguard-images/postgres/actions/workflows/release.yaml/badge.svg)](https://github.com/chainguard-images/postgres/actions/workflows/release.yaml) |
-| [python](https://github.com/chainguard-images/python) | [![CI status](https://github.com/chainguard-images/python/actions/workflows/release.yaml/badge.svg)](https://github.com/chainguard-images/python/actions/workflows/release.yaml) |
-| [ruby](https://github.com/chainguard-images/ruby) | [![CI status](https://github.com/chainguard-images/ruby/actions/workflows/release-3.0.yaml/badge.svg)](https://github.com/chainguard-images/ruby/actions/workflows/release-3.0.yaml) [![CI status](https://github.com/chainguard-images/ruby/actions/workflows/release-3.1.yaml/badge.svg)](https://github.com/chainguard-images/ruby/actions/workflows/release-3.1.yaml) |
-| [sdk](https://github.com/chainguard-images/sdk) | [![CI status](https://github.com/chainguard-images/sdk/actions/workflows/release.yaml/badge.svg)](https://github.com/chainguard-images/sdk/actions/workflows/release.yaml) |
-| [static](https://github.com/chainguard-images/static) | [![CI status](https://github.com/chainguard-images/static/actions/workflows/release.yaml/badge.svg)](https://github.com/chainguard-images/static/actions/workflows/release.yaml) |
-| [wolfi-base](https://github.com/chainguard-images/wolfi-base) | [![CI status](https://github.com/chainguard-images/wolfi-base/actions/workflows/release.yaml/badge.svg)](https://github.com/chainguard-images/wolfi-base/actions/workflows/release.yaml) |
+| Name | OCI Reference | Variants/Tags |
+| ----- | ----- |  -------- |
+| [alpine-base](./images/alpine-base) | `cgr.dev/chainguard/alpine-base` | [![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/alpine-base.build.status.latest.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/alpine-base:latest) |
+| [apko](./images/apko) | `cgr.dev/chainguard/apko` | [![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/apko.build.status.latest.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/apko:latest) |
+| [bazel](./images/bazel) | `cgr.dev/chainguard/bazel` | [![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/bazel.build.status.experimental.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/bazel:experimental) |
+| [busybox](./images/busybox) | `cgr.dev/chainguard/busybox` | [![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/busybox.build.status.latest-glibc.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/busybox:latest-glibc)<br/>[![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/busybox.build.status.latest.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/busybox:latest) |
+| [gcc-glibc](./images/gcc-glibc) | `cgr.dev/chainguard/gcc-glibc` | [![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/gcc-glibc.build.status.latest.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/gcc-glibc:latest) |
+| [gcc-musl](./images/gcc-musl) | `cgr.dev/chainguard/gcc-musl` | [![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/gcc-musl.build.status.latest.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/gcc-musl:latest) |
+| [git](./images/git) | `cgr.dev/chainguard/git` | [![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/git.build.status.latest-glibc-root.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/git:latest-glibc-root)<br/>[![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/git.build.status.latest-glibc.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/git:latest-glibc)<br/>[![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/git.build.status.latest-root.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/git:latest-root)<br/>[![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/git.build.status.latest.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/git:latest) |
+| [glibc-dynamic](./images/glibc-dynamic) | `cgr.dev/chainguard/glibc-dynamic` | [![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/glibc-dynamic.build.status.latest.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/glibc-dynamic:latest) |
+| [go](./images/go) | `cgr.dev/chainguard/go` | [![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/go.build.status.latest-glibc.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/go:latest-glibc)<br/>[![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/go.build.status.latest.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/go:latest) |
+| [jdk](./images/jdk) | `cgr.dev/chainguard/jdk` | [![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/jdk.build.status.openjdk-11.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/jdk:openjdk-11)<br/>[![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/jdk.build.status.openjdk-17.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/jdk:openjdk-17) |
+| [jenkins](./images/jenkins) | `cgr.dev/chainguard/jenkins` | [![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/jenkins.build.status.experimental.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/jenkins:experimental) |
+| [jre](./images/jre) | `cgr.dev/chainguard/jre` | [![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/jre.build.status.openjdk-jre-11.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/jre:openjdk-jre-11)<br/>[![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/jre.build.status.openjdk-jre-17.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/jre:openjdk-jre-17) |
+| [ko](./images/ko) | `cgr.dev/chainguard/ko` | [![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/ko.build.status.latest.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/ko:latest) |
+| [kubectl](./images/kubectl) | `cgr.dev/chainguard/kubectl` | [![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/kubectl.build.status.latest.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/kubectl:latest) |
+| [maven](./images/maven) | `cgr.dev/chainguard/maven` | [![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/maven.build.status.openjdk-11.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/maven:openjdk-11)<br/>[![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/maven.build.status.openjdk-17.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/maven:openjdk-17) |
+| [melange](./images/melange) | `cgr.dev/chainguard/melange` | [![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/melange.build.status.latest.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/melange:latest) |
+| [musl-dynamic](./images/musl-dynamic) | `cgr.dev/chainguard/musl-dynamic` | [![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/musl-dynamic.build.status.latest.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/musl-dynamic:latest) |
+| [nginx](./images/nginx) | `cgr.dev/chainguard/nginx` | [![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/nginx.build.status.latest.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/nginx:latest)<br/>[![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/nginx.build.status.stable.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/nginx:stable) |
+| [node](./images/node) | `cgr.dev/chainguard/node` | [![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/node.build.status.latest.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/node:latest) |
+| [php](./images/php) | `cgr.dev/chainguard/php` | [![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/php.build.status.latest.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/php:latest) |
+| [postgres](./images/postgres) | `cgr.dev/chainguard/postgres` | [![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/postgres.build.status.15.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/postgres:15) |
+| [python](./images/python) | `cgr.dev/chainguard/python` | [![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/python.build.status.latest-glibc.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/python:latest-glibc)<br/>[![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/python.build.status.latest.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/python:latest) |
+| [ruby](./images/ruby) | `cgr.dev/chainguard/ruby` | [![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/ruby.build.status.latest-3.0.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/ruby:latest-3.0)<br/>[![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/ruby.build.status.latest-3.1.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/ruby:latest-3.1) |
+| [sdk](./images/sdk) | `cgr.dev/chainguard/sdk` | [![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/sdk.build.status.latest.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/sdk:latest)<br/>[![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/sdk.build.status.wolfi.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/sdk:wolfi) |
+| [static](./images/static) | `cgr.dev/chainguard/static` | [![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/static.build.status.latest-glibc.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/static:latest-glibc)<br/>[![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/static.build.status.latest.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/static:latest) |
+| [wolfi-base](./images/wolfi-base) | `cgr.dev/chainguard/wolfi-base` | [![](https://storage.googleapis.com/chainguard-images-build-outputs/badges/wolfi-base.build.status.latest.svg)](https://registry-ui.chainguard.app/?image=cgr.dev/chainguard/wolfi-base:latest) |

@@ -80,7 +80,12 @@ but otherwise self-contained. In those cases you can use the following images:
 
 ### Language Runtimes
 
-These are still largely in progress, but we are working on images for runtimes such as the JRE.
+These images can be used to run applications:
+
+- [python](https://github.com/chainguard-images/images/tree/main/images/python)
+- [node](https://github.com/chainguard-images/images/tree/main/images/node)
+- [ruby](https://github.com/chainguard-images/images/tree/main/images/ruby)
+- [java](https://github.com/chainguard-images/images/tree/main/images/jre)
 
 ### Compilers
 
@@ -95,6 +100,9 @@ Examples:
  - [go](https://github.com/chainguard-images/images/tree/main/images/go)
  - [gcc-glibc](https://github.com/chainguard-images/images/tree/main/images/gcc-glibc)
  - [gcc-musl](https://github.com/chainguard-images/images/tree/main/images/gcc-musl)
+ - [jdk](https://github.com/chainguard-images/images/tree/main/images/jdk)
+ - [maven](https://github.com/chainguard-images/images/tree/main/images/maven)
+ - [bazel](https://github.com/chainguard-images/images/tree/main/images/bazel)
 
 ### Middleware and Applications
 
@@ -107,6 +115,7 @@ of dependencies, they typically have significantly less vulnerabilities than equ
 For example:
  - [nginx](https://github.com/chainguard-images/images/tree/main/images/nginx) 
  - [git](https://github.com/chainguard-images/images/tree/main/images/git)
+ - [kubectl](https://github.com/chainguard-images/images/tree/main/images/kubectl)
  - [apko](https://github.com/chainguard-images/images/tree/main/images/apko)
  - [melange](https://github.com/chainguard-images/images/tree/main/images/melange)
 

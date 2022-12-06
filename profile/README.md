@@ -167,6 +167,8 @@ the contents of the image.
 
 ## Learn more 
 
+For more information on Chainguard images and how to use them visit [Chainguard Academy](https://edu.chainguard.dev/chainguard/chainguard-images/overview/). 
+
 You can learn more about Wolfi, distroless images, apko, and melange from the following
 articles:
 

@@ -1,6 +1,6 @@
 # Chainguard Images
 
-<img width="133" src="https://raw.githubusercontent.com/chainguard-images/.github/main/profile/assets/view_images_button_4x.png"/>
+<a href="https://github.com/chainguard-images/images"><img width="133" src="https://raw.githubusercontent.com/chainguard-images/.github/main/profile/assets/view_images_button_4x.png"/></a>
 
 Chainguard Images is a collection of container images designed for minimalism and security.
 

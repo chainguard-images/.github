@@ -66,7 +66,7 @@ CMD ["/hello"]
 We can compile and run this with:
 
 ```
-$ docker build -t c-static .
+$ DOCKER_BUILDKIT=1 docker build -t c-static .
 ...
 $ docker run c-static
 Hello World!

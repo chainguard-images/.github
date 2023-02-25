@@ -2,7 +2,7 @@
 
 <a href="https://github.com/chainguard-images/images#chainguard-images"><img width="133" src="https://raw.githubusercontent.com/chainguard-images/.github/main/profile/assets/view_images_button_4x.png"/></a>
 
-Chainguard Images is a collection of container images designed for minimalism and security.
+[Chainguard Images](https://www.chainguard.dev/chainguard-images) is a collection of container images designed for minimalism and security.
 
 Many of these images are _distroless_; they contain only an application and its runtime
 dependencies. There is no shell or package manager.

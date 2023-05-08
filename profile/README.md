@@ -33,9 +33,9 @@ For example, to pull the apko image with Docker:
 docker pull cgr.dev/chainguard/apko 
 ```
 
-There are various types of images available. The full list can be found in the [Release Status
-section](https://github.com/chainguard-images#release-status) or you can use the repository search
-function. Some categories and highlights follow.
+There are a wide variety of images available. For more information, refer to the [authoritative list of images](https://github.com/chainguard-images/images) or [documentation](https://edu.chainguard.dev/chainguard/chainguard-images/). 
+
+We'll cover some of the main categories and highlights below.
 
 ### Minimal Base Images
 

@@ -20,7 +20,7 @@ apko lets you bundle a collection of APKs into an OCI image using a declarative 
 Chainguard Images provide SBOM support and signatures for known provenance and more secure base
 images. They can be part of an approach to a secure software factory.
 
-Many of the images use the [Wolfi undistro](https://github.com/wolfi-dev/), and we are working on
+Most images use the [Wolfi undistro](https://github.com/wolfi-dev/), and we are working on
 porting the rest.
 
 ## Find and use Chainguard Images

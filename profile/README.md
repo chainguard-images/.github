@@ -20,8 +20,17 @@ apko lets you bundle a collection of APKs into an OCI image using a declarative 
 Chainguard Images provide SBOM support and signatures for known provenance and more secure base
 images. They can be part of an approach to a secure software factory.
 
-Many of the images use the [Wolfi undistro](https://github.com/wolfi-dev/), and we are working on
-porting the rest.
+Almost all of the images are based on the [Wolfi un-distro](https://github.com/wolfi-dev/). Those that don't are:
+
+- `cgr.dev/chainguard/static:latest`
+- `cgr.dev/chainguard/busybox:latest`
+- `cgr.dev/chainguard/git:latest`
+
+...which are based on [Alpine Linux](https://www.alpinelinux.org/), and are based on musl.
+
+All of these images have an equivalent Wolfi-based image, tagged `:latest-glibc`.
+
+All Wolfi-based images are based on glibc, except for [`gcc-musl`](https://github.com/chainguard-images/images/tree/main/images/gcc-musl) and [`musl-dynamic`](https://github.com/chainguard-images/images/tree/main/images/musl-dynamic).
 
 ## Find and use Chainguard Images
 

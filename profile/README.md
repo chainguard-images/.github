@@ -147,9 +147,7 @@ All Chainguard Images come with a [Software Bill Of Materials
 The SBOM can be downloaded using the [`cosign`](https://docs.sigstore.dev/cosign/overview) tool e.g:
 
 ```
-$ cosign download sbom --platform linux/amd64 cgr.dev/chainguard/nginx | jq
-WARNING: Downloading SBOMs this way does not ensure its authenticity. If you want to ensure a tamper-proof SBOM, download it using 'cosign download attestation <image uri>' or verify its signature.
-Found SBOM of media type: spdx+json
+$ cosign download attestation --type https://spdx.dev/Document --platform linux/amd64 cgr.dev/chainguard/nginx | jq -r .payload | base64 -d | jq
 {
   "SPDXID": "SPDXRef-DOCUMENT",
   "name": "sbom-sha256:05f301c5da6b701a1024dce52ccb9c58a61f98cd9816432ace5c0f7bfef40df7",

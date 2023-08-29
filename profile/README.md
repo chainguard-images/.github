@@ -3,7 +3,7 @@
 <a href="https://github.com/chainguard-images/images#chainguard-images"><img width="133" src="https://raw.githubusercontent.com/chainguard-images/.github/main/profile/assets/view_images_button_4x.png"/></a>
 
 ** *CHAINGUARD OFFICE HOURS NOW AVAILABLE* ** <br>
-[Book 1:1 office hours](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2f-mbr4nIfspR1Vu1vRnuoLXcuGDFtfFu8EaUlctBkpRidNXzAXQyz0Zwz8ozGEJV12SyOP7kC) to ask us anything about images or troubleshoot any issues. 
+[Book 1:1 office hours](https://go.chainguard.dev/office-hours-emea) to ask us anything about images or troubleshoot any issues. 
 --
 [Chainguard Images](https://www.chainguard.dev/chainguard-images) is a collection of container images designed for minimalism and security.
 

@@ -61,7 +61,7 @@ The most common way to use this image is with a multistage Dockerfile. For examp
 
 ```
 # syntax=docker/dockerfile:1.4
-FROM cgr.dev/chainguard/gcc-musl:latest as build
+FROM cgr.dev/chainguard/gcc-glibc:latest as build
 
 COPY <<EOF /hello.c
 #include <stdio.h>
@@ -88,7 +88,6 @@ In some cases it is easier to produce binaries that are dynamically linked again
 but otherwise self-contained. In those cases you can use the following images:
 
  - [glibc-dynamic](https://github.com/chainguard-images/images/tree/main/images/glibc-dynamic)
- - [musl-dynamic](https://github.com/chainguard-images/images/tree/main/images/musl-dynamic)
 
 ### Language Runtimes
 

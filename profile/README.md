@@ -1,10 +1,17 @@
 # Chainguard Images
 
-<a href="https://github.com/chainguard-images/images#chainguard-images"><img width="133" src="https://raw.githubusercontent.com/chainguard-images/.github/main/profile/assets/view_images_button_4x.png"/></a>
+<a href="https://images.chainguard.dev/"><img width="133" src="https://raw.githubusercontent.com/chainguard-images/.github/main/profile/assets/view_images_button_4x.png"/></a>
 
-** *CHAINGUARD OFFICE HOURS NOW AVAILABLE* ** <br>
-[Book 1:1 office hours](https://get.chainguard.dev/chainguard-images-office-hours) to ask us anything about images or troubleshoot any issues. 
---
+## [Chainguard Office Hours Now Available](https://get.chainguard.dev/chainguard-images-office-hours)
+
+Book 1:1 office hours to ask us anything about images or troubleshoot any issues. 
+
+## [Join our next Learning Labs](https://go.chainguard.dev/learning-labs)
+
+Hands on with Chainguard for a live demo on how to switch to Chainguard Images!
+
+---
+
 [Chainguard Images](https://www.chainguard.dev/chainguard-images) is a collection of container images designed for minimalism and security.
 
 Many of these images are _distroless_; they contain only an application and its runtime

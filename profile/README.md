@@ -140,14 +140,18 @@ For example:
 ## Signatures
 
 All Chainguard Images are signed using [Sigstore](https://www.sigstore.dev/), and you can check
-the signature using [`cosign`](https://docs.sigstore.dev/cosign/overview). For our apko image example,
+the signature using [`cosign`](https://docs.sigstore.dev/cosign/overview). For our apko image for example,
 you can run the following:
 
 ```
-COSIGN_EXPERIMENTAL=1 cosign verify cgr.dev/chainguard/apko | jq 
+cosign verify cgr.dev/chainguard/apko \
+    --certificate-identity=https://github.com/chainguard-images/images/.github/workflows/release.yaml@refs/heads/main \
+    --certificate-oidc-issuer=https://token.actions.githubusercontent.com | jq
 ```
 
 Your output will indicate that the cosign claims were validated.
+
+This verifies that the image was keylessly signed by the GitHub Actions release workflow from the `main` branch.
 
 ## SBOMs
 

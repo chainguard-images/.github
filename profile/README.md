@@ -117,7 +117,6 @@ Examples:
 
  - [go](https://github.com/chainguard-images/images/tree/main/images/go)
  - [gcc-glibc](https://github.com/chainguard-images/images/tree/main/images/gcc-glibc)
- - [gcc-musl](https://github.com/chainguard-images/images/tree/main/images/gcc-musl)
  - [jdk](https://github.com/chainguard-images/images/tree/main/images/jdk)
  - [maven](https://github.com/chainguard-images/images/tree/main/images/maven)
  - [bazel](https://github.com/chainguard-images/images/tree/main/images/bazel)

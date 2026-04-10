@@ -1,7 +1,7 @@
 issuer: https://accounts.google.com
 
-# octo-sts/internal-tools: internal-tools-gh-rt-checker@octo-sts.iam.gserviceaccount.com
-subject_pattern: "117769840195636332244"
+# octo-sts/internal-tools: internal-tools-gh-rt-chk-img@octo-sts.iam.gserviceaccount.com
+subject_pattern: "111641611208456503833"
 
 permissions:
   contents: read

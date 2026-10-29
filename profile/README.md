@@ -52,7 +52,7 @@ For example, to pull the apko image with Docker:
 docker pull cgr.dev/chainguard/apko 
 ```
 
-There are a wide variety of images available. For more information, refer to the [authoritative list of images](https://github.com/chainguard-images/images) or [documentation](https://edu.chainguard.dev/chainguard/chainguard-images/). 
+There are a wide variety of images available. For more information, refer to the [authoritative list of images](https://github.com/chainguard-images/images) or [documentation](https://www.chainguard.dev/docs/chainguard/containers). 
 
 We'll cover some of the main categories and highlights below.
 
@@ -186,7 +186,7 @@ the contents of the image.
 
 ## Learn more 
 
-For more information on Chainguard images and how to use them visit [Chainguard Academy](https://edu.chainguard.dev/chainguard/chainguard-images/overview/). 
+For more information on Chainguard images and how to use them visit [Chainguard Academy](https://www.chainguard.dev/docs/chainguard/containers/overview). 
 
 You can learn more about Wolfi, distroless images, apko, and melange from the following
 articles:
